@@ -14,8 +14,8 @@ import scipy.sparse
 @st.cache_data
 def load_data():
     items= pd.read_csv("cellphones_dataurl1.csv")
-    interactions= pd.read_csv("cellphones ratings.csv")
-    users= pd.read_csv("cellphones users.csv")
+    interactions= pd.read_csv("cellphonesratings.csv")
+    users= pd.read_csv("cellphonesusers.csv")
     return items, interactions,users
 
 items, interactions,users = load_data()
@@ -130,4 +130,5 @@ if "selected_section" in st.session_state:
         selected_index2 = clickable_images(image_paths,titles=names,
                                           div_style={"display": "flex", "flex-wrap": "wrap", "gap": "30px"},
                                           img_style={"height": "200px", "border-radius": "10px", "cursor": "pointer"}
+
                                           )
