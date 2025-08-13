@@ -13,9 +13,9 @@ import scipy.sparse
 # Load MovieLens dataset (Ensure this dataset has an 'image_url' column)
 @st.cache_data
 def load_data():
-    items= pd.read_csv("cellphones_dataurl1.csv")
-    interactions= pd.read_csv("cellphonesratings.csv")
-    users= pd.read_csv("cellphonesusers.csv")
+    items= pd.read_csv("data/cellphones_dataurl1.csv")
+    interactions= pd.read_csv("data/cellphonesratings.csv")
+    users= pd.read_csv("data/cellphonesusers.csv")
     return items, interactions,users
 
 items, interactions,users = load_data()
@@ -132,3 +132,4 @@ if "selected_section" in st.session_state:
                                           img_style={"height": "200px", "border-radius": "10px", "cursor": "pointer"}
 
                                           )
+
